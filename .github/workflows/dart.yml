@@ -26,6 +26,9 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
+      - name: Run jq
+        uses: sergeysova/jq-action@v2
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.10'
