@@ -26,7 +26,6 @@ jobs:
           cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
 
       - run: flutter --version
-
 #      - name: Install Flutter
 #        uses: britannio/action-install-flutter@v1.1
 #
