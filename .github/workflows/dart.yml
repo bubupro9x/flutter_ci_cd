@@ -24,22 +24,12 @@ jobs:
           cache: true
           cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:' # optional, change this to force refresh cache
           cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
-      - run: |
-          echo CACHE-PATH=${{ steps.flutter-action.outputs.CACHE-PATH }}
-          echo CACHE-KEY=${{ steps.flutter-action.outputs.CACHE-KEY }}
-          echo CHANNEL=${{ steps.flutter-action.outputs.CHANNEL }}
-          echo VERSION=${{ steps.flutter-action.outputs.VERSION }}
-          echo ARCHITECTURE=${{ steps.flutter-action.outputs.ARCHITECTURE }}
 
-      - run: flutter --version
-#      - name: Install Flutter
-#        uses: britannio/action-install-flutter@v1.1
-#
-#      - name: Install dependencies
-#        run: flutter pub get
-#
-#      - name: Analyze project source
-#        run: flutter analyze
-#
-#      - name: Run tests
-#        run: flutter test
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project source
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
