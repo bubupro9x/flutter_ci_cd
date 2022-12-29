@@ -27,9 +27,9 @@ jobs:
         with:
           flutter-version: '3.3.10'
           channel: 'stable'
-          cache: true
-          cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:' # optional, change this to force refresh cache
-          cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
+#          cache: true
+#          cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:' # optional, change this to force refresh cache
+#          cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
 
       # Get flutter dependencies.
       - run: flutter pub get
